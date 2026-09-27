@@ -1,0 +1,637 @@
+{
+  "title": "Awesome DIY Software",
+  "intro": "A curated list of awesome DIY software. Inspired by [awesome-go](https://github.com/avelino/awesome-go) and [this HN post](https://news.ycombinator.com/item?id=16591918). What awesome-diy-software has in common:",
+  "categories": [
+    {
+      "name": "Compilers",
+      "id": "compilers",
+      "icon": "⚙️",
+      "description": "",
+      "items": [
+        {
+          "id": "item-5",
+          "title": "The Super Tiny Compiler",
+          "url": "https://github.com/jamiebuilds/the-super-tiny-compiler",
+          "description": "",
+          "tags": [],
+          "difficulty": "Beginner",
+          "category": "Compilers"
+        },
+        {
+          "id": "item-6",
+          "title": "Let's Build a Compiler",
+          "url": "https://compilers.iecc.com/crenshaw/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Advanced",
+          "category": "Compilers"
+        }
+      ]
+    },
+    {
+      "name": "Cryptocurrency",
+      "id": "cryptocurrency",
+      "icon": "🪙",
+      "description": "",
+      "items": [
+        {
+          "id": "item-7",
+          "title": "Nativecoin - build your own crypto-currency",
+          "url": "https://lhartikk.github.io/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Cryptocurrency"
+        }
+      ]
+    },
+    {
+      "name": "Game Development",
+      "id": "game-development",
+      "icon": "🎮",
+      "description": "",
+      "items": [
+        {
+          "id": "item-8",
+          "title": "Unity's roll-a-ball tutorial",
+          "url": "https://unity3d.com/learn/tutorials/s/roll-ball-tutorial",
+          "description": "pretty good for starting out with their IDE and also gives some decent exposure to C# basics.",
+          "tags": [
+            "C#",
+            "Unity"
+          ],
+          "difficulty": "Beginner",
+          "category": "Game Development"
+        }
+      ]
+    },
+    {
+      "name": "Interpreters: Lisp Based",
+      "id": "interpreters-lisp-based",
+      "icon": "🧠",
+      "description": "",
+      "items": [
+        {
+          "id": "item-9",
+          "title": "Write You a Scheme",
+          "url": "https://github.com/write-you-a-scheme-v2/scheme",
+          "description": "Haskell to write a Scheme!",
+          "tags": [
+            "Haskell"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Interpreters: Lisp Based"
+        },
+        {
+          "id": "item-10",
+          "title": "Build Your Own Lisp",
+          "url": "http://www.buildyourownlisp.com/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Interpreters: Lisp Based"
+        },
+        {
+          "id": "item-11",
+          "title": "Scheme from Scratch",
+          "url": "http://peter.michaux.ca/articles/scheme-from-scratch-introduction",
+          "description": "",
+          "tags": [],
+          "difficulty": "Advanced",
+          "category": "Interpreters: Lisp Based"
+        },
+        {
+          "id": "item-12",
+          "title": "Make a LISP",
+          "url": "https://github.com/kanaka/mal",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Interpreters: Lisp Based"
+        },
+        {
+          "id": "item-13",
+          "title": "Writing an Interpreter in Go",
+          "url": "https://interpreterbook.com/",
+          "description": "",
+          "tags": [
+            "Go"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Interpreters: Lisp Based"
+        }
+      ]
+    },
+    {
+      "name": "Image Processing and Computer Vision",
+      "id": "image-processing-and-computer-vision",
+      "icon": "👁️",
+      "description": "",
+      "items": [
+        {
+          "id": "item-14",
+          "title": "Build a Kick-Ass Mobile Document",
+          "url": "https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Image Processing and Computer Vision"
+        }
+      ]
+    },
+    {
+      "name": "Interpreters: Other (Non - Lisp)",
+      "id": "interpreters-other-non-lisp-",
+      "icon": "🔮",
+      "description": "There is a separate section, for lisp interpreters",
+      "items": [
+        {
+          "id": "item-15",
+          "title": "Crafting Interpreters",
+          "url": "http://www.craftinginterpreters.com/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Interpreters: Other (Non - Lisp)"
+        },
+        {
+          "id": "item-16",
+          "title": "Create your own programming language",
+          "url": "http://createyourproglang.com/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Interpreters: Other (Non - Lisp)"
+        }
+      ]
+    },
+    {
+      "name": "Java Virtual Machine",
+      "id": "java-virtual-machine",
+      "icon": "☕",
+      "description": "",
+      "items": [
+        {
+          "id": "item-17",
+          "title": "Simple.vm",
+          "url": "https://github.com/skx/simple.vm",
+          "description": "",
+          "tags": [],
+          "difficulty": "Beginner",
+          "category": "Java Virtual Machine"
+        }
+      ]
+    },
+    {
+      "name": "Laravel",
+      "id": "laravel",
+      "icon": "🔴",
+      "description": "",
+      "items": [
+        {
+          "id": "item-18",
+          "title": "Writing a full-featured multi-tenant Laravel app from scratch",
+          "url": "https://medium.com/@ashokgelal/writing-a-full-featured-multi-tenant-laravel-app-from-scratch-a0e1a7350d9d",
+          "description": "",
+          "tags": [
+            "Laravel"
+          ],
+          "difficulty": "Advanced",
+          "category": "Laravel"
+        },
+        {
+          "id": "item-19",
+          "title": "Let's Build A Forum with Laravel and TDD",
+          "url": "https://laracasts.com/series/lets-build-a-forum-with-laravel",
+          "description": "",
+          "tags": [
+            "Laravel",
+            "TDD"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Laravel"
+        }
+      ]
+    },
+    {
+      "name": "Operating Systems",
+      "id": "operating-systems",
+      "icon": "💻",
+      "description": "",
+      "items": [
+        {
+          "id": "item-20",
+          "title": "nand2tetris",
+          "url": "http://nand2tetris.org/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Operating Systems"
+        },
+        {
+          "id": "item-21",
+          "title": "Containers in 500 lines",
+          "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Operating Systems"
+        },
+        {
+          "id": "item-22",
+          "title": "Malloc tutorial",
+          "url": "https://danluu.com/malloc-tutorial/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Operating Systems"
+        },
+        {
+          "id": "item-23",
+          "title": "Bitwise",
+          "url": "https://github.com/pervognsen/bitwise",
+          "description": "An educational project to create a software/hardware stack for a computer from scratch.",
+          "tags": [],
+          "difficulty": "Advanced",
+          "category": "Operating Systems"
+        },
+        {
+          "id": "item-24",
+          "title": "Baby's First Garbage Collector",
+          "url": "http://journal.stuffwithstuff.com/2013/12/08/babys-first-garbage-collector/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Beginner",
+          "category": "Operating Systems"
+        },
+        {
+          "id": "item-25",
+          "title": "A TDD approach for building a simple microprocessor model in Python",
+          "url": "http://joaoventura.net/blog/2017/simple-microprocessor/",
+          "description": "",
+          "tags": [
+            "Python",
+            "TDD"
+          ],
+          "difficulty": "Beginner",
+          "category": "Operating Systems"
+        },
+        {
+          "id": "item-26",
+          "title": "Linux From Scratch",
+          "url": "http://www.linuxfromscratch.org/",
+          "description": "",
+          "tags": [
+            "Linux"
+          ],
+          "difficulty": "Advanced",
+          "category": "Operating Systems"
+        }
+      ]
+    },
+    {
+      "name": "Regular Expressions",
+      "id": "regular-expressions",
+      "icon": "🔍",
+      "description": "",
+      "items": [
+        {
+          "id": "item-27",
+          "title": "A Regular Expression Matcher",
+          "url": "https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Regular Expressions"
+        }
+      ]
+    },
+    {
+      "name": "Retracers and 3D Rendering",
+      "id": "retracers-and-3d-rendering",
+      "icon": "✨",
+      "description": "",
+      "items": [
+        {
+          "id": "item-28",
+          "title": "Build your own 3D renderer",
+          "url": "https://avik-das.github.io/build-your-own-raytracer/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Retracers and 3D Rendering"
+        },
+        {
+          "id": "item-29",
+          "title": "Ray Tracing in One Weekend",
+          "url": "https://www.amazon.com/dp/B01B5AODD8",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Retracers and 3D Rendering"
+        }
+      ]
+    },
+    {
+      "name": "Software renderer",
+      "id": "software-renderer",
+      "icon": "🎨",
+      "description": "",
+      "items": [
+        {
+          "id": "item-30",
+          "title": "learn how the principles of computer rendering work",
+          "url": "https://github.com/ssloy/tinyrenderer/wiki/Lesson-1:-Bresenham%E2%80%99s-Line-Drawing-Algorithm",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Software renderer"
+        }
+      ]
+    },
+    {
+      "name": "Storage and Databases",
+      "id": "storage-and-databases",
+      "icon": "💾",
+      "description": "",
+      "items": [
+        {
+          "id": "item-31",
+          "title": "Build a simple database",
+          "url": "https://cstack.github.io/db_tutorial/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Beginner",
+          "category": "Storage and Databases"
+        },
+        {
+          "id": "item-32",
+          "title": "Implementing a Key-Value Store",
+          "url": "http://codecapsule.com/2012/11/07/implementing-a-key-value-store-part-1-what-are-key-value-stores-and-why-implement-one/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Storage and Databases"
+        },
+        {
+          "id": "item-33",
+          "title": "Build your own Redis",
+          "url": "https://rohitpaulk.com/articles/redis-0",
+          "description": "",
+          "tags": [
+            "Redis"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Storage and Databases"
+        }
+      ]
+    },
+    {
+      "name": "Text Editor",
+      "id": "text-editor",
+      "icon": "📝",
+      "description": "",
+      "items": [
+        {
+          "id": "item-34",
+          "title": "Kilo: Build Your Own Text Editor",
+          "url": "https://viewsourcecode.org/snaptoken/kilo/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Text Editor"
+        }
+      ]
+    },
+    {
+      "name": "Version Control",
+      "id": "version-control",
+      "icon": "🌿",
+      "description": "",
+      "items": [
+        {
+          "id": "item-35",
+          "title": "Implements the basics of the git version control system",
+          "url": "http://gitlet.maryrosecook.com/docs/gitlet.html",
+          "description": "",
+          "tags": [],
+          "difficulty": "Beginner",
+          "category": "Version Control"
+        }
+      ]
+    },
+    {
+      "name": "Web Apps: Usage",
+      "id": "web-apps-usage",
+      "icon": "🌐",
+      "description": "These are tutorials for learning to use web frameworks:",
+      "items": [
+        {
+          "id": "item-36",
+          "title": "Some useful links for React.js",
+          "url": "https://github.com/markerikson/react-redux-links/",
+          "description": "",
+          "tags": [
+            "React"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Web Apps: Usage"
+        },
+        {
+          "id": "item-37",
+          "title": "How to Build Tinder with React Native & Expo",
+          "url": "https://www.udemy.com/how-to-build-tinder/",
+          "description": "",
+          "tags": [
+            "React",
+            "Expo"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Web Apps: Usage"
+        },
+        {
+          "id": "item-38",
+          "title": "Writing a full-featured multi-tenant web app from scratch",
+          "url": "https://medium.com/@ashokgelal/writing-a-full-featured-multi-tenant-laravel-app-from-scratch-a0e1a7350d9d",
+          "description": "",
+          "tags": [],
+          "difficulty": "Advanced",
+          "category": "Web Apps: Usage"
+        }
+      ]
+    },
+    {
+      "name": "Web frameworks: Internals",
+      "id": "web-frameworks-internals",
+      "icon": "⚡",
+      "description": "These tutorials are geared towards building a frontend web framework and can be used to get a better understanding of internals.",
+      "items": [
+        {
+          "id": "item-39",
+          "title": "Build your own React",
+          "url": "https://github.com/hexacta/didact",
+          "description": "",
+          "tags": [
+            "React"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Web frameworks: Internals"
+        },
+        {
+          "id": "item-40",
+          "title": "Build Yourself a Redux",
+          "url": "https://zapier.com/engineering/how-to-build-redux/",
+          "description": "",
+          "tags": [
+            "Redux"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Web frameworks: Internals"
+        },
+        {
+          "id": "item-41",
+          "title": "Build Your Own Angular JS",
+          "url": "https://teropa.info/build-your-own-angular/",
+          "description": "",
+          "tags": [
+            "Angular"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Web frameworks: Internals"
+        }
+      ]
+    },
+    {
+      "name": "Web Programming",
+      "id": "web-programming",
+      "icon": "🚀",
+      "description": "",
+      "items": [
+        {
+          "id": "item-42",
+          "title": "Building a basic HTTP server from scratch in Python",
+          "url": "http://joaoventura.net/blog/2017/python-webserver/",
+          "description": "",
+          "tags": [
+            "Python"
+          ],
+          "difficulty": "Beginner",
+          "category": "Web Programming"
+        }
+      ]
+    },
+    {
+      "name": "Unsorted",
+      "id": "unsorted",
+      "icon": "📦",
+      "description": "PRs to organize these resources are very welcome!",
+      "items": [
+        {
+          "id": "item-43",
+          "title": "Handmade Hero",
+          "url": "https://handmadehero.org/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Unsorted"
+        },
+        {
+          "id": "item-44",
+          "title": "Build your own Sinatra",
+          "url": "https://getgood.at/build-your-own/sinatra",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Unsorted"
+        },
+        {
+          "id": "item-45",
+          "title": "Destroy All Software's \"From Scratch\" series",
+          "url": "https://www.destroyallsoftware.com/screencasts/catalog",
+          "description": "",
+          "tags": [],
+          "difficulty": "Advanced",
+          "category": "Unsorted"
+        },
+        {
+          "id": "item-46",
+          "title": "Building an online marketplace from scratch",
+          "url": "https://www.voucherify.io/blog/building-an-online-marketplace-from-scratch-introduction",
+          "description": "",
+          "tags": [],
+          "difficulty": "Advanced",
+          "category": "Unsorted"
+        },
+        {
+          "id": "item-47",
+          "title": "Build a game with Lua and LÖVE",
+          "url": "https://github.com/SSYGEN/blog/issues/30",
+          "description": "",
+          "tags": [
+            "Lua",
+            "LÖVE"
+          ],
+          "difficulty": "Intermediate",
+          "category": "Unsorted"
+        },
+        {
+          "id": "item-48",
+          "title": "Let's Make a Voxel Engine",
+          "url": "https://sites.google.com/site/letsmakeavoxelengine/",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Unsorted"
+        }
+      ]
+    },
+    {
+      "name": "Other similar lists",
+      "id": "other-similar-lists",
+      "icon": "📚",
+      "description": "",
+      "items": [
+        {
+          "id": "item-49",
+          "title": "500 Lines or less",
+          "url": "http://aosabook.org/en/index.html",
+          "description": "Book with many small tutorials covering a wide range of topics",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Other similar lists"
+        },
+        {
+          "id": "item-50",
+          "title": "Project Based Learning",
+          "url": "https://github.com/tuvtran/project-based-learning",
+          "description": "",
+          "tags": [],
+          "difficulty": "Intermediate",
+          "category": "Other similar lists"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "totalProjects": 50,
+    "categoriesCount": 20,
+    "technologiesCount": 15,
+    "languages": [
+      "C#",
+      "Unity",
+      "Haskell",
+      "Go",
+      "Laravel",
+      "TDD",
+      "Python",
+      "Linux",
+      "Redis",
+      "React",
+      "Expo",
+      "Redux",
+      "Angular",
+      "Lua",
+      "LÖVE"
+    ]
+  }
+}

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "node build.js"
+    "build": "node build.js",
+    "share": "npx localtunnel --port 3000",
+    "tunnel": "npx localtunnel --port 3000"
   },
   "keywords": [
     "awesome-list",

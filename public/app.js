@@ -64,11 +64,19 @@ async function initApp() {
   await loadData();
 }
 
-// Fetch structured data from server
+// Fetch structured data from server (with static fallback for web hosting)
 async function loadData() {
   try {
-    const res = await fetch('/api/data');
-    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    let res = null;
+    try {
+      res = await fetch('/api/data');
+    } catch (e) {
+      res = null;
+    }
+    if (!res || !res.ok) {
+      res = await fetch('./data.json');
+    }
+    if (!res || !res.ok) throw new Error(`HTTP error! status: ${res ? res.status : 'offline'}`);
     appData = await res.json();
 
     // Flatten all projects with index for original order
@@ -567,10 +575,24 @@ function initEventListeners() {
   btnInspect.addEventListener('click', async () => {
     modalInspect.style.display = 'flex';
     try {
-      const res = await fetch('/api/raw');
-      const data = await res.json();
-      rawReadmeCode.textContent = data.readme || 'No README found';
-      rawTmplCode.textContent = data.tmpl || 'No template found';
+      let res = null;
+      try {
+        res = await fetch('/api/raw');
+      } catch (e) {
+        res = null;
+      }
+      if (res && res.ok) {
+        const data = await res.json();
+        rawReadmeCode.textContent = data.readme || 'No README found';
+        rawTmplCode.textContent = data.tmpl || 'No template found';
+      } else {
+        const [readmeRes, tmplRes] = await Promise.all([
+          fetch('./README.md').catch(() => null),
+          fetch('./page.tmpl').catch(() => null)
+        ]);
+        rawReadmeCode.textContent = readmeRes && readmeRes.ok ? await readmeRes.text() : 'No README found';
+        rawTmplCode.textContent = tmplRes && tmplRes.ok ? await tmplRes.text() : 'No template found';
+      }
     } catch (err) {
       rawReadmeCode.textContent = 'Error loading raw files';
     }
