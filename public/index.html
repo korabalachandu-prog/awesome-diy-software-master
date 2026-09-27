@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A curated directory of awesome DIY software projects to build compilers, operating systems, databases, 3D renderers, and web frameworks from scratch.">
+  <title>Awesome DIY Software — Build From Scratch</title>
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Awesome DIY Software</span>
+          <span class="brand-badge">Build from Scratch</span>
+        </div>
+      </div>
+
+      <!-- Center Search in Nav (desktop) -->
+      <div class="nav-search">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="global-search" placeholder="Search DIY projects, compilers, databases, languages..." autocomplete="off">
+        <kbd class="search-kbd">Ctrl K</kbd>
+        <button id="clear-search" class="clear-btn" title="Clear search" aria-label="Clear search" style="display: none;">✕</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button id="btn-bookmarks" class="nav-btn" title="View Bookmarks">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>Saved</span>
+          <span id="bookmark-badge" class="counter-pill">0</span>
+        </button>
+
+        <button id="btn-inspect" class="nav-btn" title="Inspect README.md & Template">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <span class="btn-text-desktop">Inspect Files</span>
+        </button>
+
+        <button id="btn-add-project" class="nav-btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>Add Project</span>
+        </button>
+
+        <button id="theme-toggle" class="icon-btn" title="Toggle Theme" aria-label="Toggle dark/light theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-chip">
+        <span class="pulse-dot"></span>
+        <span>Curated DIY Software Catalog</span>
+      </div>
+      <h1 class="hero-title">
+        Master Software Engineering <br>
+        <span class="gradient-text">By Building It From Scratch</span>
+      </h1>
+      <p class="hero-subtitle">
+        Weekend-sized step-by-step implementations of compilers, operating systems, databases, 3D renderers, and web engines. Learn the underlying fundamentals by getting your hands dirty.
+      </p>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="stat-total">0</div>
+          <div class="stat-label">Curated DIY Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-categories">0</div>
+          <div class="stat-label">Tech Domains</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="stat-techs">0</div>
+          <div class="stat-label">Technologies & Languages</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Free & Open Source</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar & Tech Pills -->
+  <section class="controls-bar">
+    <div class="controls-container">
+      <!-- Technology pills -->
+      <div class="tech-pills-wrapper">
+        <span class="filter-label">Quick Filter:</span>
+        <div class="tech-pills" id="tech-filter-pills">
+          <button class="pill active" data-filter="all">All</button>
+          <!-- Dynamic tech buttons injected by JS -->
+        </div>
+      </div>
+
+      <!-- Difficulty and Sort options -->
+      <div class="filters-row">
+        <div class="difficulty-group">
+          <span class="filter-label">Difficulty:</span>
+          <div class="segmented-control" id="difficulty-filter">
+            <button class="segment-btn active" data-difficulty="all">All</button>
+            <button class="segment-btn" data-difficulty="Beginner">Beginner</button>
+            <button class="segment-btn" data-difficulty="Intermediate">Intermediate</button>
+            <button class="segment-btn" data-difficulty="Advanced">Advanced</button>
+          </div>
+        </div>
+
+        <div class="sort-group">
+          <label for="sort-select" class="filter-label">Sort by:</label>
+          <select id="sort-select" class="custom-select">
+            <option value="original">Original Order</option>
+            <option value="name-asc">Name (A → Z)</option>
+            <option value="name-desc">Name (Z → A)</option>
+            <option value="category">Category</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Layout (Sidebar + Content) -->
+  <main class="main-layout">
+    <div class="content-container">
+      <!-- Category Sidebar -->
+      <aside class="category-sidebar">
+        <div class="sidebar-header">
+          <h3>Categories</h3>
+          <button id="btn-reset-categories" class="text-btn">Reset</button>
+        </div>
+        <nav class="category-nav" id="category-nav-list">
+          <!-- Populated by JS -->
+        </nav>
+      </aside>
+
+      <!-- Projects Grid Area -->
+      <div class="projects-main">
+        <!-- Results info banner -->
+        <div class="results-header">
+          <div class="results-count">
+            Showing <strong id="visible-count">0</strong> projects
+            <span id="active-filter-summary" class="filter-summary"></span>
+          </div>
+          <div class="view-toggles">
+            <button id="view-grid" class="icon-btn-sm active" title="Grid View">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </button>
+            <button id="view-compact" class="icon-btn-sm" title="Compact List View">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bookmarks Active Banner -->
+        <div id="bookmarks-banner" class="bookmarks-banner" style="display: none;">
+          <div class="banner-content">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Viewing your saved bookmarks (<span id="saved-counter-text">0</span> items)</span>
+          </div>
+          <button id="btn-clear-bookmarks" class="text-btn text-danger">Clear All</button>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="cards-grid" id="projects-grid">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" style="display: none;">
+          <div class="empty-icon">🔍</div>
+          <h3>No DIY projects match your search</h3>
+          <p>Try clearing filters or searching for different keywords like <code>compiler</code>, <code>lisp</code>, <code>database</code>, or <code>game</code>.</p>
+          <button id="btn-clear-all-filters" class="btn-secondary">Clear All Filters</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Submit Project Modal -->
+  <div id="modal-submit" class="modal-backdrop" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon">➕</div>
+          <div>
+            <h3>Suggest a DIY Project</h3>
+            <p>Add a new weekend tutorial or implementation to the catalog</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-submit">✕</button>
+      </div>
+      <form id="form-submit-project" class="modal-form">
+        <div class="form-group">
+          <label for="input-title">Project Title *</label>
+          <input type="text" id="input-title" required placeholder="e.g. Build Your Own BitTorrent Client">
+        </div>
+        <div class="form-group">
+          <label for="input-url">Tutorial / Repository URL *</label>
+          <input type="url" id="input-url" required placeholder="https://github.com/username/project">
+        </div>
+        <div class="form-group">
+          <label for="select-category">Category *</label>
+          <select id="select-category" required class="custom-select">
+            <option value="" disabled selected>Select a category...</option>
+            <option value="Compilers">Compilers</option>
+            <option value="Cryptocurrency">Cryptocurrency</option>
+            <option value="Game Development">Game Development</option>
+            <option value="Interpreters: Lisp Based">Interpreters: Lisp Based</option>
+            <option value="Interpreters: Other (Non - Lisp)">Interpreters: Other (Non - Lisp)</option>
+            <option value="Image Processing and Computer Vision">Image Processing & CV</option>
+            <option value="Java Virtual Machine">Java Virtual Machine</option>
+            <option value="Laravel">Laravel</option>
+            <option value="Operating Systems">Operating Systems</option>
+            <option value="Regular Expressions">Regular Expressions</option>
+            <option value="Retracers and 3D Rendering">Retracers & 3D Rendering</option>
+            <option value="Software renderer">Software Renderer</option>
+            <option value="Storage and Databases">Storage & Databases</option>
+            <option value="Text Editor">Text Editor</option>
+            <option value="Version Control">Version Control</option>
+            <option value="Web Apps: Usage">Web Apps: Usage</option>
+            <option value="Web frameworks: Internals">Web Frameworks: Internals</option>
+            <option value="Web Programming">Web Programming</option>
+            <option value="Unsorted">Unsorted</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="input-desc">Short Description / Tech Stack</label>
+          <textarea id="input-desc" rows="3" placeholder="Brief note on what it teaches, language used (e.g. Python, Rust, Go), and estimated length."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="btn-cancel-submit">Cancel</button>
+          <button type="submit" class="btn-primary" id="btn-save-project">Add to README.md</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- File Inspector Modal -->
+  <div id="modal-inspect" class="modal-backdrop" style="display: none;">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon">📄</div>
+          <div>
+            <h3>Project Files Inspector</h3>
+            <p>Direct view of raw README.md and web/page.tmpl</p>
+          </div>
+        </div>
+        <button class="modal-close" id="btn-close-inspect">✕</button>
+      </div>
+
+      <div class="inspector-tabs">
+        <button class="inspector-tab active" data-tab="readme">README.md</button>
+        <button class="inspector-tab" data-tab="tmpl">web/page.tmpl</button>
+        <button class="inspector-tab" data-tab="static">Static Build Preview</button>
+      </div>
+
+      <div class="inspector-body">
+        <div id="tab-content-readme" class="tab-pane active">
+          <div class="code-header">
+            <span>Markdown source with YAML frontmatter</span>
+            <button class="btn-copy-code" data-target="raw-readme-code">Copy Raw</button>
+          </div>
+          <pre><code id="raw-readme-code">Loading...</code></pre>
+        </div>
+
+        <div id="tab-content-tmpl" class="tab-pane">
+          <div class="code-header">
+            <span>Go HTML template file</span>
+            <button class="btn-copy-code" data-target="raw-tmpl-code">Copy Raw</button>
+          </div>
+          <pre><code id="raw-tmpl-code">Loading...</code></pre>
+        </div>
+
+        <div id="tab-content-static" class="tab-pane">
+          <div class="code-header">
+            <span>Rendered with build.js via web/page.tmpl</span>
+            <a href="/index.html" target="_blank" class="btn-text-link">Open in New Tab ↗</a>
+          </div>
+          <iframe id="static-preview-frame" src="/index.html" class="preview-iframe"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p><strong>Awesome DIY Software</strong> — A curated directory inspired by awesome-go & HN.</p>
+        <p class="footer-sub">All projects follow the hands-on "Weekend Projects" philosophy to teach underlying tech by implementation.</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/avelino/awesome-go" target="_blank" rel="noopener noreferrer" class="footer-link">awesome-go ↗</a>
+        <a href="https://news.ycombinator.com/item?id=16591918" target="_blank" rel="noopener noreferrer" class="footer-link">HN Discussion ↗</a>
+        <button id="btn-scroll-top" class="scroll-top-btn" title="Back to top">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
