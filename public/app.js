@@ -559,8 +559,16 @@ function initEventListeners() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, url, category, description })
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to submit project');
+      let data = {};
+      try {
+        data = await res.json();
+      } catch (_) {}
+      if (!res.ok) {
+        if (res.status === 404) {
+          throw new Error('Adding projects requires the local server (npm start). Static hosting is read-only.');
+        }
+        throw new Error(data.error || `Failed to submit project (${res.status})`);
+      }
 
       showToast('Project added to README.md successfully! 🎉', 'success');
       formSubmitProject.reset();

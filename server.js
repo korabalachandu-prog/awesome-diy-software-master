@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 3000;
 
 function findReadmePath() {
   const paths = [
-    path.join(__dirname, 'awesome-diy-software-master', 'README.md'),
-    path.join(__dirname, 'README.md')
+    path.join(__dirname, 'README.md'),
+    path.join(__dirname, 'awesome-diy-software-master', 'README.md')
   ];
   for (const p of paths) {
     if (fs.existsSync(p)) return p;
@@ -17,8 +17,8 @@ function findReadmePath() {
 
 function findTmplPath() {
   const paths = [
-    path.join(__dirname, 'awesome-diy-software-master', 'web', 'page.tmpl'),
-    path.join(__dirname, 'web', 'page.tmpl')
+    path.join(__dirname, 'web', 'page.tmpl'),
+    path.join(__dirname, 'awesome-diy-software-master', 'web', 'page.tmpl')
   ];
   for (const p of paths) {
     if (fs.existsSync(p)) return p;
@@ -264,7 +264,7 @@ const server = http.createServer((req, res) => {
         if (match) {
           // Append to category
           const updatedCatSection = match[1].trimEnd() + '\n' + newItem;
-          content = content.replace(match[1], updatedCatSection + '\n');
+          content = content.replace(match[1], () => updatedCatSection + '\n');
         } else {
           // Create new category at the bottom
           content += `\n## ${category}\n\n${newItem}`;
@@ -293,14 +293,21 @@ const server = http.createServer((req, res) => {
   // Static File Serving
   if (pathname === '/') pathname = '/index.html';
 
-  let filePath = path.join(__dirname, 'public', pathname);
+  const publicDir = path.join(__dirname, 'public');
+  const distDir = path.join(__dirname, 'dist');
+  let filePath = path.join(publicDir, pathname);
 
-  // If requested file is not in public, check dist or workspace root
+  // If requested file is not in public, check dist
   if (!fs.existsSync(filePath)) {
-    const distPath = path.join(__dirname, 'dist', pathname);
-    if (fs.existsSync(distPath)) {
-      filePath = distPath;
-    }
+    filePath = path.join(distDir, pathname);
+  }
+
+  // Prevent path traversal
+  const normalizedPath = path.normalize(filePath);
+  if (!normalizedPath.startsWith(publicDir) && !normalizedPath.startsWith(distDir)) {
+    res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('403 Forbidden');
+    return;
   }
 
   fs.stat(filePath, (err, stats) => {
